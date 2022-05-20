@@ -6,7 +6,9 @@ from github import Github
 
 # First create a Github instance:
 g = Github("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") ## Personal access Token from GitHub
-repo1 = g.get_repo("AgamalARM/Dexcom_update1")         ## Repo name that create file in it
+user = g.get_user()
+st.write(user.login)
+#repo1 = g.get_repo("AgamalARM/Dexcom_update1")         ## Repo name that create file in it
 
 ver = st.__version__
 print(ver)
