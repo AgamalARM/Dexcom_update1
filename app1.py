@@ -2,6 +2,12 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+from github import Github
+
+# First create a Github instance:
+g = Github("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") ## Personal access Token from GitHub
+repo1 = g.get_repo("AgamalARM/Dexcom_update1")         ## Repo name that create file in it
+
 ver = st.__version__
 print(ver)
 
@@ -45,6 +51,8 @@ with st.sidebar :
             
 st.write(f"Dataset after update")
 st.write(df)
+df.to_csv(file,index=False)
+#repo1.create_file("filesaved2.csv","Dexcom File Saved", "This is the content of df_student")
 
             
         
