@@ -5,7 +5,8 @@ import numpy as np
 ver = st.__version__
 print(ver)
 
-file = f'C:\\Users\Gamal\Dexcom_update\\admin.csv'
+file = f'admin.csv'                   ##'C:\\Users\Gamal\Dexcom_update\\admin.csv'
+                   
 
 @st.cache
 def get_table(table_name:str, file_location:str):
